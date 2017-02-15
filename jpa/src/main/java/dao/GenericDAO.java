@@ -23,7 +23,7 @@ public abstract class GenericDAO<T> {
     }
 
     public List<T> findAll() {
-        return entityManager.createQuery(String.format("select o from %s o", type.getName()), type)
+        return entityManager.createQuery(String.format("select o from %s o order by id", type.getName()), type)
                 .getResultList();
     }
 

@@ -11,7 +11,8 @@
     <module>jpa</module>
     <module>ejb</module>
     <module>model</module>
-      <module>common</module>
+    <module>common</module>
+    <module>web</module>
   </modules>
 
   <packaging>pom</packaging>

@@ -21,7 +21,6 @@ public class PersonMapper {
     public PersonEntity toDatabaseModel(PersonJSF person) {
         PersonEntity dbPerson = new PersonEntity();
 
-        dbPerson.setId(person.getId());
         dbPerson.setName(person.getName());
         dbPerson.setSurname(person.getSurname());
         dbPerson.setEmail(person.getEmail());
@@ -56,7 +55,17 @@ public class PersonMapper {
         return person;
     }
 
-    public PersonEntity fromTo(PersonEntity from, PersonEntity to) {
+    public void fromTo(PersonEntity from, PersonEntity to) {
+        to.setName(from.getName());
+        to.setSurname(from.getSurname());
+        to.setEmail(from.getEmail());
+        to.setGender(from.getGender());
+        to.setBirthDay(from.getBirthDay());
+        to.setAddress(from.getAddress());
+        to.setActive(from.getActive());
+    }
+
+    public void fromTo(PersonJSF from, PersonEntity to) {
         to.setId(from.getId());
         to.setName(from.getName());
         to.setSurname(from.getSurname());
@@ -65,7 +74,6 @@ public class PersonMapper {
         to.setBirthDay(from.getBirthDay());
         to.setAddress(from.getAddress());
         to.setActive(from.getActive());
-
-        return to;
     }
+
 }

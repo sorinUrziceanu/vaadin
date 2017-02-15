@@ -42,9 +42,15 @@
             <version>${project.version}</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>web</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>admin</finalName>
+        <finalName>template</finalName>
     </build>
 </project>
